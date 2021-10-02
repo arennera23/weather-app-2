@@ -46,36 +46,24 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-2">
-            <img
-              src=""
-              alt="Clear"
-              width="100"
-              id="icon"
-            />
-          </div>
-          <div class="col-sm-10">
-            <div class="row">
-              <div class="col-2 col-sm-4">
-                <div class="temperature-display">
-                  <span id="current-temperature">21</span>
-                  <span class="units">
-                    <a href="#" id="celsius-link">°C</a> |
+          <div class="col-6">
+            <div class="clearfix weather-display">
+                  <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Clear" width="100" id="icon"/>
+                <span id="current-temperature">21</span>
+                <span class="units">
+                    <a href="#" id="celsius-link" class="active">°C</a> |
                     <a href="#" id="fahrenheit-link">°F</a>
-                  </span>
-                </div>
+                </span>
                 <div id="current-weather">Rainy</div>
-              </div>
-              <div class="col-8 col-sm-8">
+          </div>
+          </div>
+              <div class="col-6">
                 <ul class="additional-info">
-                  <li>Precipitation: 90%</li>
                   <li>Humidity: <span id="humidity">98</span>%</li>
                   <li>Wind: <span id="wind">1</span> km/hr</li>
                   <li>23°C | 21°C</li>
                 </ul>
               </div>
-            </div>
-          </div>
         </div>
 
         <div class="card">
