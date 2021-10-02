@@ -43,10 +43,10 @@ img {
 .temperature-display {
   padding-left: 18px;
 }
-.current-temperature {
+#current-temperature {
   font-size: 35px;
 }
-.current-weather {
+#current-weather {
   font-size: 25px;
   padding-left: 18px;
 }
