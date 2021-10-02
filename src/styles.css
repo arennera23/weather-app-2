@@ -1,0 +1,62 @@
+body {
+  background-image: url(file:///Users/mochimochi23/Documents/GitHub/weather-app/images/pexels-donald-tong-55787.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+div.week {
+  padding-bottom: 20px;
+}
+img {
+  margin: 0;
+}
+.additional-info {
+  list-style-type: none;
+}
+.weather-app {
+  max-width: 600px;
+  background-color: rgba(3, 87, 117, 0.7);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0px 30px 50px rgba(0 0 0 / 80%);
+  color: #fff;
+  margin: 30px auto;
+  display: block;
+}
+.card {
+  background-color: rgba(3, 87, 117, 0.1);
+  box-shadow: 0px 30px 50px rgba(0 0 0 / 80%);
+}
+#city {
+  font-size: 35px;
+  font-weight: 500;
+}
+.city-date {
+  padding-left: 18px;
+}
+.search-info {
+  line-height: 32px;
+  list-style-type: none;
+  padding: 0px;
+  font-size: 20px;
+}
+.temperature-display {
+  padding-left: 18px;
+}
+.current-temperature {
+  font-size: 35px;
+}
+.current-weather {
+  font-size: 25px;
+  padding-left: 18px;
+}
+.search-bar {
+  width: 50%;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  height: 40px;
+}
+p {
+  text-align: center;
+}
