@@ -60,7 +60,7 @@ searchForm.addEventListener("submit", searchCity);
 
 function currentWeather(response) {
   let cityElement = document.querySelector("#city");
-  let temperatureElement = document.querySelector(".current-temperature");
+  let temperatureElement = document.querySelector("#current-temperature");
   let cityName = response.data.name;
   let temp = Math.round(response.data.main.temp);
 
@@ -89,7 +89,7 @@ button.addEventListener("click", getCurrentPosition);
 
 function displayCelsius(event) {
   event.preventDefault();
-  let celsiusTemperature = document.querySelector(".current-temperature");
+  let celsiusTemperature = document.querySelector("#current-temperature");
   celsiusTemperature.innerHTML = 21;
 }
 
@@ -98,8 +98,9 @@ celsius.addEventListener("click", displayCelsius);
 
 function displayFahrenheit(event) {
   event.preventDefault();
-  let fahrenheitTemperature = document.querySelector(".current-temperature");
-  fahrenheitTemperature.innerHTML = 69.8;
+  let fahrenheitTemperature = (21 * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", displayFahrenheit);
