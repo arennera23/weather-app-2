@@ -1,5 +1,5 @@
 body {
-  background-image: url(file:///Users/mochimochi23/Documents/GitHub/weather-app/images/sky-background.jpg);
+  background-image: url("../images/sky-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Roboto", sans-serif;
