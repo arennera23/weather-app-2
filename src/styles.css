@@ -1,5 +1,5 @@
 body {
-  background-image: url(file:///Users/mochimochi23/Documents/GitHub/weather-app/images/pexels-donald-tong-55787.jpg);
+  background-image: url(file:///Users/mochimochi23/Documents/GitHub/weather-app/images/sky-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Roboto", sans-serif;
@@ -67,4 +67,7 @@ p {
 }
 .weather-display .active:hover {
   text-decoration: none;
+}
+.photo-source {
+  text-align: center;
 }
