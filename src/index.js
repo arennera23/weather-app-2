@@ -26,6 +26,7 @@ let dateElement = document.querySelector("#day-and-time");
 dateElement.innerHTML = updatedDay(currentTime);
 
 function showTemperature(response) {
+  console.log(response.data);
   let currentWeather = document.querySelector(".current-weather");
   currentWeather.innerHTML = response.data.weather[0].main;
   let humidity = document.querySelector("#humidity");
@@ -37,6 +38,11 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector(".current-temperature");
   temperatureElement.innerHTML = `${temperature}`;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/10d@2x.png`
+  );
 }
 function searchCity(event) {
   event.preventDefault();
