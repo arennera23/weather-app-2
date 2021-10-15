@@ -27,20 +27,18 @@ dateElement.innerHTML = updatedDay(currentTime);
 
 function showDailyForecast() {
   let forecastElement = document.querySelector("#forecast");
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+  let days = ["Sun", "Mon"];
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
       `<div class="col-2">
-  <div class="day">Sun</div>
-              <div class="forecast-image">
+  <div class="day">${day}</div>
                 <img
-                  src="images/cloud-rain-heavy.svg"
-                  alt="heavy rain"
+                  src="http://openweathermap.org/img/wn/10d@2x.png"
+                  alt=""
                   width="30"
                 />
-              </div>
               <div class="forecast-temperature">
                 <span class="forecast-temp-max">26</span>  
                 <span class="forecast-temp-min">21</span>
@@ -55,10 +53,9 @@ showDailyForecast();
 
 function getForecast(coordinates) {
   let apiKey = "80f710d0fa6ebf8b91a4584a907a8eb6";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showDailyForecast);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lats}&lon=${coordinates.lon}&appid=${apiKey}`;
+  axios.get(apiUrl);
 }
-
 function showTemperature(response) {
   let weatherDescription = document.querySelector("#current-weather");
   weatherDescription.innerHTML = response.data.weather[0].main;
