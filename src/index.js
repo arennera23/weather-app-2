@@ -27,7 +27,7 @@ dateElement.innerHTML = updatedDay(currentTime);
 
 function showDailyForecast() {
   let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = forecastHTML;
+
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
@@ -50,8 +50,10 @@ function showDailyForecast() {
   });
 
   forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
   console.log(forecastHTML);
 }
+showDailyForecast();
 
 function showTemperature(response) {
   let weatherDescription = document.querySelector("#current-weather");
