@@ -25,6 +25,8 @@ let dateElement = document.querySelector("#day-and-time");
 
 dateElement.innerHTML = updatedDay(currentTime);
 
+function showForecast()
+
 function showTemperature(response) {
   let weatherDescription = document.querySelector("#current-weather");
   weatherDescription.innerHTML = response.data.weather[0].main;
