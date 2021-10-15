@@ -25,7 +25,33 @@ let dateElement = document.querySelector("#day-and-time");
 
 dateElement.innerHTML = updatedDay(currentTime);
 
-function showForecast()
+function showDailyForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHTML;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+  <div class="day">Sun</div>
+              <div class="forecast-image">
+                <img
+                  src="images/cloud-rain-heavy.svg"
+                  alt="heavy rain"
+                  width="30"
+                />
+              </div>
+              <div class="forecast-temperature">
+                <span class="forecast-temp-max">26</span>  
+                <span class="forecast-temp-min">21</span>
+              </div>
+              </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  console.log(forecastHTML);
+}
 
 function showTemperature(response) {
   let weatherDescription = document.querySelector("#current-weather");
