@@ -34,7 +34,6 @@ function formatDays(timestamp) {
 }
 
 function showDailyForecast(response) {
-  console.log(response.data.daily);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
@@ -50,15 +49,17 @@ function showDailyForecast(response) {
                     forecastDay.weather[0].icon
                   }@2x.png"
                   alt=""
-                  width="30"
+                  width="50"
                 />
               <div class="forecast-temperature">
                 <span class="forecast-temp-max">${Math.round(
                   forecastDay.temp.max
-                )}°</span>  
+                )}<span class="degrees-symbol-max">°</span>
+                </span>
                 <span class="forecast-temp-min">${Math.round(
                   forecastDay.temp.min
-                )}°</span>
+                )}<span class="degrees-symbol-min">°</span>
+                </span>
               </div>
               </div>`;
     }
@@ -69,7 +70,6 @@ function showDailyForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "80f710d0fa6ebf8b91a4584a907a8eb6";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showDailyForecast);
@@ -96,7 +96,7 @@ function showTemperature(response) {
   humidity.innerHTML = Math.round(response.data.main.humidity);
 
   let wind = document.querySelector("#wind");
-  wind.innerHTML = response.data.wind.speed;
+  wind.innerHTML = Math.round(response.data.wind.speed);
 
   let currentTempMax = document.querySelector("#current-temp-max");
   currentTempMax.innerHTML = Math.round(response.data.main.temp_max);
@@ -123,4 +123,3 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmitButton);
 
 searchCity("Tokyo");
-showDailyForecast();

@@ -7,10 +7,9 @@ body {
 div.week {
   padding-bottom: 20px;
 }
-img {
-  margin: 0;
-}
+
 .additional-info {
+  font-size: 18px;
   list-style-type: none;
 }
 
@@ -24,13 +23,15 @@ img {
   margin: 30px auto;
   display: block;
 }
-
+#icon {
+  width: 130px;
+}
 #city {
   font-size: 35px;
   font-weight: 500;
 }
 .city-date {
-  padding-left: 18px;
+  padding-left: 20px;
 }
 .search-info {
   line-height: 32px;
@@ -38,53 +39,57 @@ img {
   padding: 0px;
   font-size: 20px;
 }
-.temperature-display {
-  padding-left: 18px;
-}
+
 #current-temperature {
-  font-size: 35px;
+  font-size: 40px;
 }
 #current-weather {
   font-size: 25px;
-  padding-left: 18px;
+  position: relative;
+  left: -93px;
+  top: -10px;
 }
 #current-temp-max {
   color: orange;
 }
-#current-temp-min {
-  color: blue;
+.units {
+  font-size: 25px;
 }
-.celsius-symbol-max {
+.celsius-symbol-max,
+.degrees-symbol-max,
+.forecast-temp-max {
   color: orange;
 }
-.celsius-symbol-min {
-  color: blue;
+
+.degrees-symbol-min,
+.forecast-temp-min、 {
+  color: #00449d;
 }
 .search-bar {
   width: 50%;
   padding: 5px;
   border: 1px solid gray;
-  border-radius: 2px;
+  border-radius: 4px;
   height: 40px;
 }
 p {
   text-align: center;
 }
 
-.weather-display .active {
-  color: #fff;
-  cursor: default;
-}
-.weather-display .active:hover {
-  text-decoration: none;
-}
 .photo-source {
   text-align: center;
 }
 
 .daily-forecast {
+  text-align: center;
   border-radius: 16px;
   background-color: rgba(3, 87, 117, 0.3);
   box-shadow: 0px 30px 50px rgba(0 0 0 / 80%);
   padding: 30px;
+}
+img {
+  display: inline;
+}
+.float-left {
+  float: left;
 }
