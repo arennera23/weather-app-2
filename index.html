@@ -33,15 +33,14 @@
             autocomplete="off"
           />
           <input type="submit" value="Search" class="btn btn-secondary" />
-          <button id="button" class="btn btn-dark">Current Location</button>
         </form>
         <br />
         <div class="row">
           <div class="col city-date">
             <ul class="search-info">
-              <li id="city">Tokyo</li>
+              <li id="city">City</li>
               <li id="date">August 14</li>
-              <li id="day-and-time">Sunday 20:58</li>
+              <li >Last updated: <span id="day-and-time">day and date</span></li>
             </ul>
           </div>
         </div>
@@ -61,11 +60,11 @@
                 <ul class="additional-info">
                   <li>Humidity: <span id="humidity">98</span>%</li>
                   <li>Wind: <span id="wind">1</span> km/hr</li>
-                  <li>23°C | 21°C</li>
+                  <li><span id="current-temp-max">23 </span>°C | <span id="current-temp-min">21</span>°C</li>
                 </ul>
               </div>
         </div>
-        <div class="daily-forecast" id="forecast">forecast 
+        <div class="daily-forecast" id="forecast">forescast
         </div>
       </div>
     </div>
